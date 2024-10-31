@@ -1,0 +1,51 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "CameraWidth": 40,
+  "CameraHeight": 15,
+
+  "PlayerChar": "P",
+  "PlayerHealth": 100000000,
+  "PlayerAttack": 100,
+  "PlayerStartPosX": 4,
+  "PlayerStartPosY": 20,
+
+  "HealthPotionChar": "@",
+  "HealthPotionName": "Health Potion",
+  "HealthPotionHealAmount": 30,
+
+  "InvincibilityChar": "!",
+  "InvincibilityName": "Invincibility",
+  "InvincibilityEffectTime": 4000,
+
+  "FreezeChar": "*",
+  "FreezeName": "Freeze",
+  "FreezeEffectTime": 4000,
+
+  "DragonChar": "D",
+  "DragonName": "Dragon",
+  "DragonHealth": 10000,
+  "DragonDamage": 100,
+
+  "GoblinChar": "G",
+  "GoblinName": "Goblin",
+  "GoblinHealth": 150,
+  "GoblinDamage": 20,
+  "GoblinDir": "down",
+
+  "OrcChar": "O",
+  "OrcName": "Orc",
+  "OrcHealth": 200,
+  "OrcDamage": 40,
+
+  "MinotaurChar": "}",
+  "MinotaurName": "Minotaur",
+  "MinotaurHealth": 400,
+  "MinotaurDamage": 50
+}
