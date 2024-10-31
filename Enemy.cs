@@ -26,6 +26,7 @@ namespace FirstPlayable_CalebWolthers_22012024
         private Player player;
         public HealthSystem healthSystem;
         private Currency currency;
+        
 
         public Enemy(Map map, Player player, Currency currency)
         {

@@ -33,16 +33,18 @@ namespace FirstPlayable_CalebWolthers_22012024
             this.enemyManager = enemyManager;
             this.itemManager = itemManager;
             this.ui = ui;
-            health = Settings.playerHealth;
+            Settings settings = Settings.Load("GameSettings.json");
+            health = settings.PlayerHealth;
             healthSystem = new HealthSystem(health);
             moves = 0;
-            attack = Settings.playerAttack;
-            playerChar = Settings.playerChar;
-            posX = Settings.playerStartPosX;
-            posY = Settings.playerStartPosY;
+            attack = settings.PlayerAttack;
+            playerChar = settings.PlayerChar;
+            posX = settings.PlayerStartPosX;
+            posY = settings.PlayerStartPosY;
             freezeEnemies = false;
             LastKilledEnemy = null;
         }
+
 
         public void Update(ConsoleKeyInfo input)
         {

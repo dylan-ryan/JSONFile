@@ -24,17 +24,19 @@ namespace FirstPlayable_CalebWolthers_22012024
         {
             this.map = map;
             this.player = player;
-            maxHealth = Settings.orcHealth;
+            this.currency = currency;
+            Settings settings = Settings.Load("GameSettings.json");
+            maxHealth = settings.OrcHealth;
             health = maxHealth;
-            name = Settings.orcName;
-            Char = Settings.orcChar;
-            damage = Settings.orcDamage;
+            name = settings.OrcName;
+            Char = settings.OrcChar;
+            damage = settings.OrcDamage;
             dir = "down";
             isDead = false;
             healthSystem = new HealthSystem(health);
-            this.currency = currency;
             quest = new Quests(currency);
         }
+
 
 
         private static Random rd = new Random();

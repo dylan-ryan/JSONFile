@@ -19,21 +19,23 @@ namespace FirstPlayable_CalebWolthers_22012024
         public Currency currency;
         public Quests quest;
 
-        public EnemyGoblin(Map map, Player player, Currency currency) : base(map, player, currency) 
+        public EnemyGoblin(Map map, Player player, Currency currency) : base(map, player, currency)
         {
             this.map = map;
             this.player = player;
             this.currency = currency;
-            maxHealth = Settings.goblinHealth;
+            Settings settings = Settings.Load("GameSettings.json");
+            maxHealth = settings.GoblinHealth;
             health = maxHealth;
-            name = Settings.goblinName;
-            Char = Settings.goblinChar;
-            damage = Settings.goblinDamage;
+            name = settings.GoblinName;
+            Char = settings.GoblinChar;
+            damage = settings.GoblinDamage;
             dir = "down";
             isDead = false;
             healthSystem = new HealthSystem(health);
             quest = new Quests(currency);
         }
+
 
 
         public override void Update()

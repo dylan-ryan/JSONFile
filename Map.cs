@@ -14,14 +14,17 @@ namespace FirstPlayable_CalebWolthers_22012024
     {
         static string[] mapFile;
         public char[,] map;
-        public int cameraWidth = Settings.cameraWidth;
-        public int cameraHeight = Settings.cameraHeight;
+        public int cameraWidth;
+        public int cameraHeight;
         public int width;
         public int height;
         private Player player;
-        
+
         public Map(Player player)
         {
+            Settings settings = Settings.Load("GameSettings.json");
+            cameraWidth = settings.CameraWidth;
+            cameraHeight = settings.CameraHeight;
             this.player = player;
         }
 

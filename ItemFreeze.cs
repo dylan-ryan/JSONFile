@@ -20,11 +20,13 @@ namespace FirstPlayable_CalebWolthers_22012024
             this.map = map;
             this.player = player;
             this.ui = ui;
-            name = Settings.freezeName;
-            Char = Settings.freezeChar;
+            Settings settings = Settings.Load("GameSettings.json");
+            name = settings.FreezeName;
+            Char = settings.FreezeChar;
             delete = false;
-            effectTime = Settings.freezeEffectTime;
+            effectTime = settings.FreezeEffectTime;
         }
+
 
 
         public async override void DoYourJob()

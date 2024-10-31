@@ -19,11 +19,13 @@ namespace FirstPlayable_CalebWolthers_22012024
             this.map = map;
             this.player = player;
             this.ui = ui;
-            name = Settings.invincibilityName;
-            Char = Settings.invincibilityChar;
+            Settings settings = Settings.Load("GameSettings.json");
+            name = settings.InvincibilityName;
+            Char = settings.InvincibilityChar;
+            effectTime = settings.InvincibilityEffectTime;
             delete = false;
-            effectTime = Settings.invincibilityEffectTime;
         }
+
 
 
         public async override void DoYourJob()

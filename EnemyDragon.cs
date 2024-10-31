@@ -20,21 +20,23 @@ namespace FirstPlayable_CalebWolthers_22012024
         public Currency currency;
         public Quests quest;
 
-        public EnemyDragon(Map map, Player player,Currency currency) : base(map, player, currency)
+        public EnemyDragon(Map map, Player player, Currency currency) : base(map, player, currency)
         {
-            this.map = map;
             this.player = player;
-            maxHealth = Settings.dragonHealth;
+            this.map = map;
+            Settings settings = Settings.Load("GameSettings.json");
+            maxHealth = settings.DragonHealth;
             health = maxHealth;
-            name = Settings.dragonName;
-            Char = Settings.dragonChar;
-            damage = Settings.dragonDamage;
+            name = settings.DragonName;
+            Char = settings.DragonChar;
+            damage = settings.DragonDamage;
             dir = "down";
             isDead = false;
             this.currency = currency;
             healthSystem = new HealthSystem(health);
             quest = new Quests(currency);
         }
+
 
 
         private static Random rd = new Random();

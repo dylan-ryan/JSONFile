@@ -25,16 +25,18 @@ namespace FirstPlayable_CalebWolthers_22012024
             this.map = map;
             this.player = player;
             this.currency = currency;
-            maxHealth = Settings.minotaurHealth;
+            Settings settings = Settings.Load("GameSettings.json");
+            maxHealth = settings.MinotaurHealth;
             health = maxHealth;
-            name = Settings.minotaurName;
-            Char = Settings.minotaurChar;
-            damage = Settings.minotaurDamage;
+            name = settings.MinotaurName;
+            Char = settings.MinotaurChar;
+            damage = settings.MinotaurDamage;
             dir = "down";
             isDead = false;
             healthSystem = new HealthSystem(health);
             quest = new Quests(currency);
         }
+
 
 
         public static int chaseDistance = 5;

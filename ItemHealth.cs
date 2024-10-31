@@ -19,11 +19,13 @@ namespace FirstPlayable_CalebWolthers_22012024
             this.map = map;
             this.player = player;
             this.ui = ui;
-            name = Settings.healthPotionName;
-            Char = Settings.healthPotionChar;
-            healAmount = Settings.healthPotionHealAmount;
+            Settings settings = Settings.Load("GameSettings.json");
+            name = settings.HealthPotionName;
+            Char = settings.HealthPotionChar;
+            healAmount = settings.HealthPotionHealAmount;
             delete = false;
         }
+
 
 
         public override void DoYourJob()

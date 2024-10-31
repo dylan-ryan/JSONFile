@@ -20,7 +20,6 @@ namespace FirstPlayable_CalebWolthers_22012024
 
         static void Main(string[] args)
         {
-
             gameManager.Play();
             Console.ReadKey();
 
